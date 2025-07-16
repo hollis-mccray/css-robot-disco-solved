@@ -1,0 +1,99 @@
+.robot-nose {
+  transition: all, 2s ease-in-out;
+}
+
+.robot-nose:hover {
+  transform: rotate(0.5turn);
+}
+
+.robot-ear-right {
+  animation: vanishing 3s infinite alternate;
+}
+
+@keyframes vanishing {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.robot-ear-left {
+  animation: moving-ear 8s infinite;
+}
+
+@keyframes moving-ear {
+  0% {
+    top: 465px;
+    left: 360px;
+  }
+  25% {
+    top: 10px;
+    left: 360px;
+  }
+  50% {
+    top: 10px;
+    left: 10px;
+  }
+  75% {
+    top: 465px;
+    left: 10px;
+  }
+
+  100% {
+    top: 465px;
+    left: 360px;
+  }
+}
+
+.robot-hair-style {
+  animation: vanishing 12s infinite;
+}
+
+.robot-tooth {
+  animation: bloody-teeth 5s infinite;
+}
+
+@keyframes bloody-teeth {
+  from {
+    background-color: yellow;
+  }
+  to {
+    background-color: red;
+  }
+}
+
+.robot-eye-left {
+  animation: zoom-eye 10s infinite alternate;
+}
+
+@keyframes zoom-eye {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.01);
+  }
+}
+
+.robot-eye-right,
+.robot-eye-right:after {
+  animation: spinny-eye 12s infinite alternate;
+}
+
+@keyframes spinny-eye {
+  0% {
+    background: black;
+    transform: rotate(0turn);
+  }
+  50% {
+    background: white;
+    transform: rotate(0.5turn);
+  }
+
+  100% {
+    background: black;
+    transform: rotate(0turn);
+  }
+}
